@@ -36,6 +36,7 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -150,6 +151,17 @@
           </div>
 
           <div class="skill-card reveal">
+            <h3><i class="fa-solid fa-gears"></i> Automation</h3>
+            <ul class="tags">
+              <li>n8n</li>
+              <li>Workflow Automation</li>
+              <li>WhatsApp Business API</li>
+              <li>Webhooks</li>
+              <li>API Integrations</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
             <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
             <ul class="tags">
               <li>Git</li>
@@ -172,8 +184,53 @@
       </div>
     </section>
 
+    <!-- ========== Services ========== -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section-title reveal">What I <span>Offer</span></h2>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Website Development</h3>
+            <p>Fast, responsive websites and custom web applications built with Laravel, PHP and MySQL.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <h3>Business Automation</h3>
+            <p>Automating repetitive tasks and connecting your tools with n8n workflows, APIs and webhooks.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="project-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <h3>WhatsApp Automation</h3>
+            <p>Auto-replies, order confirmations, notifications and campaigns using the WhatsApp Business API.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-receipt"></i></div>
+            <h3>FBR POS Integration</h3>
+            <p>Connecting point-of-sale systems with FBR so invoices are reported in real time with FBR invoice numbers and QR codes.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-plug"></i></div>
+            <h3>API Integration</h3>
+            <p>Building REST APIs and integrating third-party services like payment gateways, e-commerce stores and CRMs.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Maintenance &amp; Bug Fixing</h3>
+            <p>Fixing bugs, improving performance and adding features to existing Laravel and PHP projects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== Experience ========== -->
-    <section class="section" id="experience">
+    <section class="section section-alt" id="experience">
       <div class="container">
         <h2 class="section-title reveal">Work <span>Experience</span></h2>
 
@@ -183,8 +240,10 @@
             <h3>Laravel Developer</h3>
             <p class="company">H3 Technologies</p>
             <p>
-              Working on Laravel web applications: building new features, fixing bugs and
-              improving existing modules. Contributing to Texnity, an existing production project.
+              Working on Texnity, a multi-workspace WhatsApp Business API SaaS. Secured
+              workspace isolation so users can't access or modify other workspaces' data,
+              built an internal team chat system, fixed security issues, improved UX and
+              keep shipping bug fixes and enhancements.
             </p>
           </div>
 
@@ -213,25 +272,34 @@
     </section>
 
     <!-- ========== Projects ========== -->
-    <section class="section section-alt" id="projects">
+    <section class="section" id="projects">
       <div class="container">
         <h2 class="section-title reveal">My <span>Projects</span></h2>
 
         <div class="projects-grid">
           <article class="project-card reveal">
-            <div class="project-icon"><i class="fa-solid fa-shirt"></i></div>
-            <h3>Texnity</h3>
+            <div class="project-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <h3>Texnity – WhatsApp Business Platform</h3>
             <p>
-              An existing production Laravel application I contribute to at H3 Technologies,
-              working on new features, bug fixes and improvements across the codebase.
+              A live SaaS on the official WhatsApp Business API: one team inbox for WhatsApp,
+              Instagram and email, with automation flows, an AI agent and campaigns.
             </p>
+            <ul class="project-points">
+              <li>Secured cross-workspace access so users can't view or change other workspaces' data</li>
+              <li>Built an internal team chat system</li>
+              <li>Fixed security issues and improved the overall UX</li>
+              <li>Ongoing bug fixes and enhancements</li>
+            </ul>
             <ul class="tags">
               <li>Laravel</li>
               <li>PHP</li>
               <li>MySQL</li>
-              <li>jQuery</li>
+              <li>Multi-tenancy</li>
+              <li>Security</li>
             </ul>
-            <span class="project-note"><i class="fa-solid fa-lock"></i> Private codebase</span>
+            <a href="https://texnity.com" target="_blank" rel="noopener" class="project-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Website
+            </a>
           </article>
 
           <article class="project-card reveal">
@@ -275,7 +343,7 @@
     </section>
 
     <!-- ========== Education ========== -->
-    <section class="section" id="education">
+    <section class="section section-alt" id="education">
       <div class="container">
         <h2 class="section-title reveal">Education & <span>Certification</span></h2>
 
@@ -302,7 +370,7 @@
     </section>
 
     <!-- ========== Contact ========== -->
-    <section class="section section-alt" id="contact">
+    <section class="section" id="contact">
       <div class="container contact">
         <h2 class="section-title reveal">Get In <span>Touch</span></h2>
         <p class="contact-text reveal">

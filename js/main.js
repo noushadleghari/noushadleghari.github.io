@@ -42,7 +42,7 @@ navLinks.querySelectorAll("a").forEach((link) => {
 });
 
 // ---------- Typing effect in the hero ----------
-const roles = ["Full Stack Developer", "Software Engineer", "Laravel Developer", "Problem Solver"];
+const roles = ["Full Stack Developer", "Software Engineer", "Laravel Developer", "Automation Developer", "Problem Solver"];
 const typedRole = document.getElementById("typed-role");
 let roleIndex = 0;
 let charIndex = roles[0].length; // first role is already in the HTML

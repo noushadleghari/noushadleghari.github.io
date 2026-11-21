@@ -332,6 +332,7 @@ img {
 
 /* ---------- Shared card look ---------- */
 .skill-card,
+.service-card,
 .project-card,
 .edu-card,
 .about-facts {
@@ -342,6 +343,7 @@ img {
 }
 
 .skill-card,
+.service-card,
 .project-card,
 .edu-card {
   padding: 26px;
@@ -349,6 +351,7 @@ img {
 }
 
 .skill-card:hover,
+.service-card:hover,
 .project-card:hover,
 .edu-card:hover {
   transform: translateY(-5px);
@@ -412,6 +415,23 @@ img {
 
 .skill-card h3 i {
   color: var(--accent);
+}
+
+/* ---------- Services ---------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 22px;
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.93rem;
 }
 
 /* ---------- Experience timeline ---------- */
@@ -503,6 +523,30 @@ img {
   color: var(--text-muted);
   font-size: 0.93rem;
   margin-bottom: 18px;
+}
+
+/* "what I did" list inside a project card */
+.project-points {
+  margin: -6px 0 18px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.project-points li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+}
+
+.project-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 
 .project-link,
@@ -643,7 +687,7 @@ img {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .menu-btn {
     display: grid;
   }
