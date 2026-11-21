@@ -275,6 +275,23 @@ img {
   transform: translateY(-3px);
 }
 
+.hero-image {
+  position: relative;
+  isolation: isolate; /* keeps the glow behind the avatar only */
+}
+
+/* soft glow behind the avatar */
+.hero-image::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  opacity: 0.25;
+  filter: blur(20px);
+  z-index: -1;
+}
+
 .hero-image img {
   width: 320px;
   height: 320px;
@@ -302,6 +319,17 @@ img {
 
 .section-title span {
   color: var(--accent);
+}
+
+/* small accent bar under each title */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 4px;
+  background: var(--accent);
 }
 
 .company {
@@ -347,7 +375,7 @@ img {
 .project-card,
 .edu-card {
   padding: 26px;
-  transition: transform 0.2s, border-color 0.2s;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
 .skill-card:hover,
@@ -356,6 +384,7 @@ img {
 .edu-card:hover {
   transform: translateY(-5px);
   border-color: var(--accent);
+  box-shadow: 0 12px 32px rgba(79, 70, 229, 0.15);
 }
 
 /* ---------- About ---------- */
@@ -401,8 +430,12 @@ img {
 /* ---------- Skills ---------- */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* all 5 cards fit in one row on desktop */
+  gap: 18px;
+}
+
+.skill-card {
+  padding: 22px;
 }
 
 .skill-card h3 {
@@ -415,6 +448,13 @@ img {
 
 .skill-card h3 i {
   color: var(--accent);
+}
+
+/* slightly smaller tags so they stay on one line in the narrow skill cards */
+.skill-card .tags li {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  white-space: nowrap;
 }
 
 /* ---------- Services ---------- */
@@ -445,19 +485,24 @@ img {
 
 .timeline-item {
   position: relative;
-  padding-bottom: 40px;
+  padding: 22px 26px;
+  margin-bottom: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .timeline-item:last-child {
-  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* dot on the line */
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -41px;
-  top: 4px;
+  left: -42px;
+  top: 26px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -492,7 +537,7 @@ img {
 /* ---------- Projects ---------- */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 22px;
 }
 
@@ -501,74 +546,72 @@ img {
   flex-direction: column;
 }
 
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* icon box, also used in the services cards */
 .project-icon {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   display: grid;
   place-items: center;
   border-radius: 12px;
   background: var(--accent-soft);
   color: var(--accent);
   font-size: 1.3rem;
+}
+
+.service-card .project-icon {
   margin-bottom: 18px;
 }
 
+.project-type {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
 .project-card h3 {
-  font-size: 1.15rem;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
 }
 
 .project-card p {
-  flex: 1; /* pushes tags and link to the bottom so cards line up */
+  flex: 1; /* pushes tags and footer to the bottom so all cards line up */
   color: var(--text-muted);
   font-size: 0.93rem;
   margin-bottom: 18px;
 }
 
-/* "what I did" list inside a project card */
-.project-points {
-  margin: -6px 0 18px;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-.project-points li {
-  position: relative;
-  padding-left: 18px;
-  margin-bottom: 6px;
-}
-
-.project-points li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.65em;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-
-.project-link,
-.project-note {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.project-footer {
   margin-top: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
 }
 
 .project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
   color: var(--accent);
 }
 
-.project-link:hover {
-  text-decoration: underline;
+.project-link .fa-arrow-right {
+  font-size: 0.8rem;
+  transition: transform 0.2s;
 }
 
-.project-note {
-  color: var(--text-muted);
+.project-link:hover .fa-arrow-right {
+  transform: translateX(4px);
 }
 
 /* ---------- Education ---------- */
