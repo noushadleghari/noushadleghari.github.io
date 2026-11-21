@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noushad Ali | Full Stack Developer</title>
+  <meta name="description" content="Noushad Ali - Software Engineer and Full Stack Developer working with PHP, Laravel and MySQL. Based in Karachi, Pakistan.">
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Noushad Ali | Full Stack Developer">
+  <meta property="og:description" content="Software Engineer and Full Stack Developer working with PHP, Laravel and MySQL.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="assets/images/avatar.svg" type="image/svg+xml">
+
+  <!-- Apply saved theme before the page paints, so there is no flash -->
+  <script>
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== Header ========== -->
+  <header class="header">
+    <nav class="container nav">
+      <a href="#home" class="logo">Noushad<span>.</span></a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-toggle" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== Hero ========== -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hello">Hi there, I'm</p>
+          <h1>Noushad Ali</h1>
+          <h2 class="role"><span id="typed-role">Full Stack Developer</span><span class="cursor">|</span></h2>
+          <p class="hero-desc">
+            I build web applications with PHP and Laravel, from the database
+            up to the interface. I care about clean, maintainable code and
+            solving real problems.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="assets/Noushad-Ali-CV.pdf" class="btn btn-primary" download>
+              <i class="fa-solid fa-download"></i> Download CV
+            </a>
+            <a href="mailto:noshadalilaghari46@gmail.com" class="btn btn-outline">
+              <i class="fa-solid fa-envelope"></i> Email Me
+            </a>
+          </div>
+
+          <div class="socials">
+            <a href="https://github.com/noushadleghari" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/noushadleghari/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:noshadalilaghari46@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img src="assets/images/avatar.svg" alt="Cartoon avatar of Noushad Ali" width="320" height="320">
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== About ========== -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title reveal">About <span>Me</span></h2>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a Software Engineer from Karachi, Pakistan, with hands-on experience in
+              PHP, Laravel, MySQL and REST APIs. I currently work as a Laravel Developer at
+              <strong>H3 Technologies</strong>, where I build new features, fix bugs and
+              help keep our applications fast and reliable.
+            </p>
+            <p>
+              I enjoy backend work most: designing databases, writing APIs and making
+              things work properly behind the scenes. I'm always learning new tools and
+              trying to write code that the next developer will be happy to read.
+            </p>
+          </div>
+
+          <ul class="about-facts reveal">
+            <li><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</li>
+            <li><i class="fa-solid fa-briefcase"></i> Laravel Developer @ H3 Technologies</li>
+            <li><i class="fa-solid fa-graduation-cap"></i> BS Software Engineering</li>
+            <li><i class="fa-solid fa-code"></i> PHP · Laravel · MySQL</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Skills ========== -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <h2 class="section-title reveal">My <span>Skills</span></h2>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3><i class="fa-solid fa-server"></i> Backend</h3>
+            <ul class="tags">
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>MySQL</li>
+              <li>REST APIs</li>
+              <li>OOP</li>
+              <li>MVC</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3><i class="fa-solid fa-laptop-code"></i> Frontend</h3>
+            <ul class="tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>jQuery</li>
+              <li>AJAX</li>
+              <li>Tailwind CSS</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
+            <ul class="tags">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>VS Code</li>
+              <li>WordPress</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3><i class="fa-solid fa-lightbulb"></i> Soft Skills</h3>
+            <ul class="tags">
+              <li>Problem Solving</li>
+              <li>Critical Thinking</li>
+              <li>Team Communication</li>
+              <li>Continuous Learning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Experience ========== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="section-title reveal">Work <span>Experience</span></h2>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <span class="timeline-date">Oct 2026 – Present</span>
+            <h3>Laravel Developer</h3>
+            <p class="company">H3 Technologies</p>
+            <p>
+              Working on Laravel web applications: building new features, fixing bugs and
+              improving existing modules. Contributing to Texnity, an existing production project.
+            </p>
+          </div>
+
+          <div class="timeline-item reveal">
+            <span class="timeline-date">Jul 2026 – Oct 2026</span>
+            <h3>Laravel Developer Trainee</h3>
+            <p class="company">Fosphorus LLC · Karachi</p>
+            <p>
+              Contributed to web application development using Laravel, PHP, MySQL, jQuery,
+              REST APIs and JavaScript. Developed new features, resolved bugs and optimized
+              application performance.
+            </p>
+          </div>
+
+          <div class="timeline-item reveal">
+            <span class="timeline-date">Nov 2025 – Jan 2026</span>
+            <h3>WordPress Developer Intern</h3>
+            <p class="company">Mehransoft Technologies · Jamshoro</p>
+            <p>
+              Developed and deployed a company website using WordPress. Customized pages to
+              improve UI/UX and handled theme customization, plugin integrations and site setup.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Projects ========== -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <h2 class="section-title reveal">My <span>Projects</span></h2>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-shirt"></i></div>
+            <h3>Texnity</h3>
+            <p>
+              An existing production Laravel application I contribute to at H3 Technologies,
+              working on new features, bug fixes and improvements across the codebase.
+            </p>
+            <ul class="tags">
+              <li>Laravel</li>
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>jQuery</li>
+            </ul>
+            <span class="project-note"><i class="fa-solid fa-lock"></i> Private codebase</span>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h3>JobZen – Job Portal</h3>
+            <p>
+              A job portal where job seekers search and apply for jobs and employers manage
+              listings. Includes authentication, OTP password reset and automated email
+              notifications.
+            </p>
+            <ul class="tags">
+              <li>Laravel</li>
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>JavaScript</li>
+            </ul>
+            <a href="https://github.com/noushadleghari/jobzen" target="_blank" rel="noopener" class="project-link">
+              <i class="fa-brands fa-github"></i> View Code
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-pen-nib"></i></div>
+            <h3>Draftly – Blog Website</h3>
+            <p>
+              A blog platform built with Core PHP using MVC. Has an admin panel with a rich
+              text editor, user authentication, search and interactive comments.
+            </p>
+            <ul class="tags">
+              <li>PHP</li>
+              <li>MVC</li>
+              <li>JavaScript</li>
+              <li>AJAX</li>
+            </ul>
+            <a href="https://github.com/noushadleghari/draftly-blog" target="_blank" rel="noopener" class="project-link">
+              <i class="fa-brands fa-github"></i> View Code
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Education ========== -->
+    <section class="section" id="education">
+      <div class="container">
+        <h2 class="section-title reveal">Education & <span>Certification</span></h2>
+
+        <div class="edu-grid">
+          <div class="edu-card reveal">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div>
+              <h3>BS Software Engineering</h3>
+              <p class="company">University of Sindh · Jamshoro</p>
+              <p class="muted">2022 – 2025 · CGPA 3.1</p>
+            </div>
+          </div>
+
+          <div class="edu-card reveal">
+            <i class="fa-solid fa-certificate"></i>
+            <div>
+              <h3>Web Engineering</h3>
+              <p class="company">IT Industry Readiness Bootcamp · Sukkur IBA</p>
+              <p class="muted">Jul 2024 – Oct 2024 · PHP, MySQL, JavaScript, AJAX, jQuery</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Contact ========== -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact">
+        <h2 class="section-title reveal">Get In <span>Touch</span></h2>
+        <p class="contact-text reveal">
+          Have a project, a job opportunity or just want to say hi?
+          My inbox is always open.
+        </p>
+
+        <a href="mailto:noshadalilaghari46@gmail.com" class="btn btn-primary btn-lg reveal">
+          <i class="fa-solid fa-paper-plane"></i> Say Hello
+        </a>
+
+        <ul class="contact-list reveal">
+          <li>
+            <a href="mailto:noshadalilaghari46@gmail.com">
+              <i class="fa-solid fa-envelope"></i> noshadalilaghari46@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="tel:+923220473063">
+              <i class="fa-solid fa-phone"></i> +92 322 0473063
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/noushadleghari/" target="_blank" rel="noopener">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/noushadleghari" target="_blank" rel="noopener">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Noushad Ali. Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
