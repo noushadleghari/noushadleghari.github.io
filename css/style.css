@@ -678,10 +678,17 @@ img {
 /* ---------- Footer ---------- */
 .footer {
   text-align: center;
-  padding: 24px 0;
+  padding: 28px 0;
   border-top: 1px solid var(--border);
   color: var(--text-muted);
   font-size: 0.85rem;
+}
+
+.footer-tagline {
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
 }
 
 /* ---------- Scroll reveal animation ---------- */
